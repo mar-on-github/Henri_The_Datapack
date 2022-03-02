@@ -1,7 +1,7 @@
 # Set version
 scoreboard objectives add CurrentHenriVersion dummy
-scoreboard players set Installed.big CurrentHenriVersion 3
-scoreboard players set Installed.dot CurrentHenriVersion 2
+scoreboard players set Installed.big CurrentHenriVersion 4
+scoreboard players set Installed.dot CurrentHenriVersion 0
 scoreboard players set Installed.small CurrentHenriVersion 0
 
 # On first run init. settings.
