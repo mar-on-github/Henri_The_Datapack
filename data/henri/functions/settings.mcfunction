@@ -12,6 +12,7 @@ execute if data storage minecraft:henridatapack {autospawn:1} run tellraw @p [""
 execute if data storage minecraft:henridatapack {autospawn:0} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack autospawn set value 1"}}]
 tellraw @p {"text":"Default: Enabled","color":"gray"}
 
+
 tellraw @p ["",{"text":"Let all players spawn in Henri","italic":true,"color":"aqua"}]
 execute if data storage minecraft:henridatapack {enablespawning:1} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"enabled","italic":true,"color":"green"},{"text":") ","italic":true},{"text":"DISABLE","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack enablespawning set value 0"}}]
 execute if data storage minecraft:henridatapack {enablespawning:0} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack enablespawning set value 1"}}]
@@ -26,6 +27,11 @@ tellraw @p ["",{"text":"Allow multiple Henri's in this game","italic":true,"colo
 execute if data storage minecraft:henridatapack {MultipleHenris:1} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"enabled","italic":true,"color":"green"},{"text":") ","italic":true},{"text":"DISABLE","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack MultipleHenris set value 0"}}]
 execute if data storage minecraft:henridatapack {MultipleHenris:0} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack MultipleHenris set value 1"}}]
 tellraw @p {"text":"Default: Disabled","color":"gray"}
+
+tellraw @p ["",{"text":"Allow Henri to take care (and enhance some minecraft animals)","italic":true,"color":"aqua"}]
+execute if data storage minecraft:henridatapack {henrysanimals:1} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"enabled","italic":true,"color":"green"},{"text":") ","italic":true},{"text":"DISABLE","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack henrysanimals set value 0"}}]
+execute if data storage minecraft:henridatapack {henrysanimals:0} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack henrysanimals set value 1"}}]
+tellraw @p {"text":"Default: Enabled","color":"gray"}
 
 # version display
 execute as @s run trigger HenriVersion

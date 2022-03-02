@@ -16,4 +16,4 @@ scoreboard players reset @a[scores={SummonTheScaryGuy=1..}] SummonTheScaryGuy
 # Settings enforcer
 execute if data storage minecraft:henridatapack {enablespawning:1} run scoreboard players enable @a SummonTheScaryGuy
 execute if data storage minecraft:henridatapack {henricheatenabled:1} run scoreboard players enable @a DoTheHenriCheat
-function henrisanimals:wolveshavesupersleep
+execute if data storage minecraft:henridatapack {henrysanimals:1} run function henrisanimals:yes

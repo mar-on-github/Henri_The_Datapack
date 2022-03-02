@@ -11,3 +11,4 @@ scoreboard objectives add SummonTheScaryGuy trigger
 scoreboard objectives add HenriVersion trigger
 
 # Load necessary parts
+execute if data storage minecraft:henridatapack {autospawn:1} run function henri:autospawn
