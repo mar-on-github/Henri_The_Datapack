@@ -11,7 +11,7 @@ give @p arrow
 item replace entity @p armor.head with minecraft:leather_helmet{Unbreakable:1,Enchantments:[{id:respiration,lvl:1000},{id:protection,lvl:1000},{id:fire_protection,lvl:1000},{id:blast_protection,lvl:1000},{id:aqua_affinity,lvl:1000},{id:vanishing_curse,lvl:1000},{id:binding_curse,lvl:1000}]}
 item replace entity @p armor.chest with minecraft:chainmail_chestplate{Unbreakable:1,Enchantments:[{id:protection,lvl:1000},{id:mending,lvl:1000},{id:fire_protection,lvl:1000},{id:blast_protection,lvl:1000},{id:vanishing_curse,lvl:1000},{id:binding_curse,lvl:1000}]}
 item replace entity @p armor.legs with minecraft:iron_leggings{Unbreakable:1,Enchantments:[{id:protection,lvl:1000},{id:fire_protection,lvl:1000},{id:blast_protection,lvl:1000},{id:vanishing_curse,lvl:1000},{id:binding_curse,lvl:1000}]}
-item replace entity @p armor.feet with minecraft:golden_boots{Unbreakable:1,Enchantments:[{id:protection,lvl:1000},{id:frost_walker,lvl:10},{id:fire_protection,lvl:1000},{id:feather_falling,lvl:1000},{id:depth_strider,lvl:1000},{id:blast_protection,lvl:1000},{id:vanishing_curse,lvl:1000},{id:binding_curse,lvl:1000}]}
+give @p minecraft:golden_boots{Unbreakable:1,Enchantments:[{id:protection,lvl:1000},{id:frost_walker,lvl:10},{id:fire_protection,lvl:1000},{id:feather_falling,lvl:1000},{id:depth_strider,lvl:1000},{id:blast_protection,lvl:1000},{id:vanishing_curse,lvl:1000},{id:binding_curse,lvl:1000}]}
 
 # tools
 give @p minecraft:wooden_axe{Unbreakable:1,Enchantments:[{id:efficiency,lvl:1000},{id:fortune,lvl:1000},{id:vanishing_curse,lvl:1000}]}
