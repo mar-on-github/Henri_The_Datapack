@@ -2,8 +2,9 @@
 execute as @a[limit=1,sort=random] positioned as @s if entity @e[tag=Henri,distance=..20] run scoreboard players add @s HenriActiveCounter 1
 
 # Don't go over the top
-scoreboard players reset @a[scores={HenriActitivityTracker=8..}] HenriActiveCounter
-scoreboard players remove @a[distance=40..] HenriActiveCounter 3
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players reset @a[scores={HenriActitivityTracker=8..}] HenriActiveCounter
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players set @a[scores={HenriActiveCounter=..-100}] HenriActiveCounter -100
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players remove @a[distance=40..] HenriActiveCounter 3
 
 # Start talking
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=30},distance=..10] "[Henri the medicin man] oh hi there..."
