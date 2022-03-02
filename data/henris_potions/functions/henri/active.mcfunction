@@ -3,6 +3,7 @@ execute as @a[limit=1,sort=random] positioned as @s if entity @e[tag=Henri,dista
 
 # Don't go over the top
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players reset @a[scores={HenriActitivityTracker=8..}] HenriActiveCounter
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players reset @a[scores={HenriActitivityTracker=8..}] HenriActitivityTracker
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players set @a[scores={HenriActiveCounter=..-100}] HenriActiveCounter -100
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players remove @a[distance=40..] HenriActiveCounter 3
 
