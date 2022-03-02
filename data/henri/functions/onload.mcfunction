@@ -17,4 +17,5 @@ execute if data storage minecraft:henridatapack {autospawn:1} run function henri
 
 # Set counters
 scoreboard objectives add HenriActiveCounter dummy
+scoreboard objectives add HenriActitivityTracker dummy
 scoreboard objectives add catlove dummy
