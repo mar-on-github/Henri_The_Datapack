@@ -9,5 +9,3 @@ scoreboard players set Installed.small CurrentHenriVersion 0
 scoreboard objectives add DoTheHenriCheat trigger
 scoreboard objectives add SummonTheScaryGuy trigger
 scoreboard objectives add HenriVersion trigger
-scoreboard objectives add enablehenrispawning trigger
-scoreboard objectives add disablehenrispawning trigger
