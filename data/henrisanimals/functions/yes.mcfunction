@@ -9,7 +9,6 @@ execute as @e[type=wolf] if data entity @s Owner run effect give @s minecraft:st
 # Cats
 execute as @e[type=cat] if data entity @s Owner run execute if entity @a[distance=..20] run execute at @e[type=creeper,distance=..15] positioned as @s run effect give @s minecraft:glowing 1 255 true
 execute as @e[type=cat] if data entity @s Owner run execute if entity @a[distance=..20] run execute at @e[type=creeper,distance=..15] positioned as @s run particle minecraft:angry_villager ~ ~ ~
-scoreboard objectives add catlove dummy
 execute as @e[type=cat] positioned as @s if data entity @s Owner run scoreboard players add @a[distance=..5,scores={catlove=..10000}] catlove 1
 execute as @e[type=cat] positioned as @s if data entity @s Owner run scoreboard players remove @a[distance=..5,scores={catlove=10000..}] catlove 1
 execute as @e[type=cat] if data entity @s Owner run tell @a[scores={catlove=4995..5005}] I like being around you ❤
