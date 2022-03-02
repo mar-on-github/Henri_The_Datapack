@@ -1,7 +1,7 @@
 # Settings enforcer
 execute if data storage minecraft:henridatapack {enablespawning:true} run scoreboard players enable @a SummonTheScaryGuy
 execute if data storage minecraft:henridatapack {henricheatenabled:true} run scoreboard players enable @a DoTheHenriCheat
-function henrysanimals:wolveshavesupersleep
+function henrisanimals:wolveshavesupersleep
 
 # Tell them the Henri version
 scoreboard players enable @a HenriVersion
@@ -12,28 +12,28 @@ tellraw @a[scores={HenriVersion=1..}] ["",{"text":"Current installed Henri versi
 scoreboard players reset @a HenriVersion
 
 # Trigger checker
-execute as @a[scores={DoTheHenriCheat=1..}] run function henryhascheats:thehenricheat
+execute as @a[scores={DoTheHenriCheat=1..}] run function henrihascheats:thehenricheat
 scoreboard players reset @a DoTheHenriCheat
 
-execute as @a[scores={SummonTheScaryGuy=1..}] run function henrys_potions:spawn_the_scary_guy
+execute as @a[scores={SummonTheScaryGuy=1..}] run function henris_potions:spawn_the_scary_guy
 scoreboard players reset @a SummonTheScaryGuy
 
 # Settings triggered
 
 # -   Allow players to spawn Henri
-#       /trigger enablehenryspawning
-execute as @a[scores={enablehenryspawning=1..}] run data modify storage henridatapack enablespawning set value true
-scoreboard players reset @a enablehenryspawning
+#       /trigger enablehenrispawning
+execute as @a[scores={enablehenrispawning=1..}] run data modify storage henridatapack enablespawning set value true
+scoreboard players reset @a enablehenrispawning
 
-#       /trigger disablehenryspawning
-execute as @a[scores={disablehenryspawning=1..}] run data modify storage henridatapack enablespawning set value false
-scoreboard players reset @a disablehenryspawning
+#       /trigger disablehenrispawning
+execute as @a[scores={disablehenrispawning=1..}] run data modify storage henridatapack enablespawning set value false
+scoreboard players reset @a disablehenrispawning
 
 # -   Autospawn
-#       /trigger enablehenryautospawn
-execute as @a[scores={enablehenryautospawn=1..}] run data modify storage henridatapack autospawn set value true
-scoreboard players reset @a enablehenryautospawn
+#       /trigger enableHenriautospawn
+execute as @a[scores={enableHenriautospawn=1..}] run data modify storage henridatapack autospawn set value true
+scoreboard players reset @a enableHenriautospawn
 
-#       /trigger disablehenryautospawn
-execute as @a[scores={disablehenryautospawn=1..}] run data modify storage henridatapack autospawn set value false
-scoreboard players reset @a disablehenryautospawn
+#       /trigger disableHenriautospawn
+execute as @a[scores={disableHenriautospawn=1..}] run data modify storage henridatapack autospawn set value false
+scoreboard players reset @a disableHenriautospawn
