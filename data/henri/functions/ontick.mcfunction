@@ -1,8 +1,3 @@
-# Settings enforcer
-execute if data storage minecraft:henridatapack {enablespawning:true} run scoreboard players enable @a SummonTheScaryGuy
-execute if data storage minecraft:henridatapack {henricheatenabled:true} run scoreboard players enable @a DoTheHenriCheat
-function henrisanimals:wolveshavesupersleep
-
 # Tell them the Henri version
 scoreboard players enable @a HenriVersion
 # (generated with:
@@ -18,22 +13,7 @@ scoreboard players reset @a[scores={DoTheHenriCheat=1..}] DoTheHenriCheat
 execute as @a[scores={SummonTheScaryGuy=1..}] run function henris_potions:spawn_the_scary_guy
 scoreboard players reset @a[scores={SummonTheScaryGuy=1..}] SummonTheScaryGuy
 
-# Settings triggered
-
-# -   Allow players to spawn Henri
-#       /trigger enablehenrispawning
-execute as @a[scores={enablehenrispawning=1..}] run data modify storage henridatapack enablespawning set value true
-scoreboard players remove @a[scores={enablehenrispawning=1..}] enablehenrispawning 1
-
-#       /trigger disablehenrispawning
-execute as @a[scores={disablehenrispawning=1..}] run data modify storage henridatapack enablespawning set value false
-scoreboard players remove @a[scores={enablehenrispawning=1..}] disablehenrispawning 1
-
-# -   Autospawn
-#       /trigger enableHenriautospawn
-execute as @a[scores={enableHenriautospawn=1..}] run data modify storage henridatapack autospawn set value true
-scoreboard players remove @a[scores={enableHenriautospawn=1..}] enableHenriautospawn 1
-
-#       /trigger disableHenriautospawn
-execute as @a[scores={disableHenriautospawn=1..}] run data modify storage henridatapack autospawn set value false
-scoreboard players remove @a[scores={disableHenriautospawn=1..}] disableHenriautospawn 1
+# Settings enforcer
+execute if data storage minecraft:henridatapack {enablespawning:1} run scoreboard players enable @a SummonTheScaryGuy
+execute if data storage minecraft:henridatapack {henricheatenabled:1} run scoreboard players enable @a DoTheHenriCheat
+function henrisanimals:wolveshavesupersleep
