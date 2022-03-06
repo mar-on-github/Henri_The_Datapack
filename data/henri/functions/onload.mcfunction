@@ -15,7 +15,8 @@ scoreboard objectives add HenriVersion trigger
 # Load necessary parts
 execute if data storage minecraft:henridatapack {autospawn:1} run function henri:autospawn
 
-# Set counters
+# (Re)Set counters
 scoreboard objectives add HenriActiveCounter dummy
+scoreboard players reset @e HenriActiveCounter
 scoreboard objectives add HenriActitivityTracker dummy
 scoreboard objectives add catlove dummy
