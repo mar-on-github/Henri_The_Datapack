@@ -54,36 +54,36 @@ execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players 
 #   For this, Henri needs a score too.
 scoreboard players add @e[tag=Henri,limit=1,sort=random] HenriActiveCounter 1
 
-#   Living zombie villager (rarity: 1000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=1000..}] positioned as @s run tag @s add HenriDrops
+#   Living zombie villager (rarity: 10)
+execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=10..30}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] positioned as @s run say Oops, I had an expiriment go wrong...
 execute as @e[tag=HenriDrops] positioned as @s run summon minecraft:zombie_villager ~ ~ ~
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
-#   Stack of honey bottles (rarity: 3000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=3000..}] positioned as @s run tag @s add HenriDrops
+#   Stack of honey bottles (rarity: 30)
+execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=30..50}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] positioned as @s run say Oops, seems I have dropped some of my honey bottles... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] positioned as @s run summon item ~ ~-1 ~ {Item:{id:"minecraft:honey_bottle",Count:16}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
-#   Brewing stand (rarity: 5000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=5000..}] positioned as @s run tag @s add HenriDrops
+#   Brewing stand (rarity: 50)
+execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=50..60}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] positioned as @s run say Oops, seems I have dropped one of my brewing stands... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] positioned as @s run summon item ~ ~-1 ~ {Item:{id:"minecraft:brewing_stand",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
-#   Golden carrot (rarity: 6000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=6000..}] positioned as @s run tag @s add HenriDrops
+#   Golden carrot (rarity: 60)
+execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=60..65}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] positioned as @s run say Oops, seems I have dropped a golden carrot... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] positioned as @s run summon item ~ ~-1 ~ {Item:{id:"minecraft:golden_carrot",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
-#   Living slime (rarity: 6500)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=6500..}] positioned as @s run tag @s add HenriDrops
+#   Living slime (rarity: 65)
+execute as @e[limit=1,sort=random] if entity @s[tag=Henri,scores={HenriActiveCounter=65..}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] positioned as @s run say Oops, seems I have dropped a bottle... A slime broke free
 execute as @e[tag=HenriDrops] positioned as @s run summon slime ~ ~ ~
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
