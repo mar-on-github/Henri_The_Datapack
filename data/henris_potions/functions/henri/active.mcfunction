@@ -9,34 +9,44 @@ execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players 
 
 # Start talking
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=30},distance=..10] "[Henri the medicin man] oh hi there..."
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[distance=.. @a[scores={HenriActiveCounter=30},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=30},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=700},distance=..10] "[Henri the medicin man] I don't know... Would you wanna uh"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=700},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=700},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=900},distance=..10] "[Henri the medicin man] Would you wanna buy something? I got real good stuff!"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=900},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=900},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=4000},distance=..10] "[Henri the medicin man] Ey, hello there"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=4000},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=4000},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=7000},distance=..10] "[Henri the medicin man] Tis one love me friend"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=7000},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=7000},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=9000},distance=..10] "[Henri the medicin man] DAMNNNN I think I just took some of my own medicines"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=9000},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=9000},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=10000},distance=..10] "[Henri the medicin man] Okay. So I created something, and tried it out. But it was too strong man, I ain't making that ever again."
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=10000},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=10000},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=10600},distance=..10] "[Henri the medicin man] Hey you, I've got something for you. This'll make you glow-in-the-dark man!"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=10600},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run give @a[scores={HenriActiveCounter=10600},distance=..10] minecraft:potion{CustomPotionEffects:[{Id:24,Duration:2400}],CustomPotionColor:16773980,display:{Name:"\"Henri's Potion of glowing\""}}
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=10000},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=10900},distance=..10] "[Henri the medicin man] AAAAAAA"
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=10900},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=10900},distance=..40] HenriActitivityTracker 1
 
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run tellraw @a[scores={HenriActiveCounter=11000},distance=..10] "[Henri the medicin man] Oh I think I just hit my head or sum... My potions get my skin thick as rock but my memories are so... bad..."
+execute positioned as @e[tag=Henri,limit=1,sort=nearest] run playsound minecraft:entity.zombie_villager.ambient ambient @a[scores={HenriActiveCounter=11000},distance=..10]
 execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players add @a[scores={HenriActiveCounter=11000},distance=..40] HenriActitivityTracker 1
 
 # Random item drops
@@ -50,7 +60,7 @@ execute as @e[tag=HenriDrops] positioned as @s run say Oops, I had an expiriment
 execute as @e[tag=HenriDrops] positioned as @s run summon minecraft:zombie_villager ~ ~ ~
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
-summon minecraft:potion ~ ~2 ~ {id:"minecraft:lingering_potion",Count:1,tag:{Potion:"minecraft:water",CustomPotionColor:5020550,CustomPotionEffects:[{Id:1,Amplifier:126,Duration:1200},{Id:4,Amplifier:126,Duration:1200},{Id:17,Amplifier:126,Duration:200},{Id:7,Amplifier:2},{Id:8,Amplifier:126,Duration:1200},{Id:9,Amplifier:31,Duration:2400},{Id:16,Duration:1200},{Id:27,Amplifier:126,Duration:1200},{Id:24,Amplifier:126,Duration:1200},{Id:17},{Id:25,Amplifier:20,Duration:1200},{Id:19,Amplifier:126,Duration:1200},{Id:28,Duration:4000}]}}
+
 
 
 #   Stack of honey bottles (rarity: 3000)
