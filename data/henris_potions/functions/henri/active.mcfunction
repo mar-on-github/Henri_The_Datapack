@@ -45,42 +45,42 @@ execute positioned as @e[tag=Henri,limit=1,sort=nearest] run scoreboard players 
 scoreboard players add @e[tag=Henri,limit=1,sort=random] HenriActiveCounter 1
 
 #   Honey bottle (rarity: 3000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,HenriActiveCounter=3000..] positioned @s run tag @s add HenriDrops
+execute as @e[limit=1,sort=random] if entity @s[scores={HenriActiveCounter=3000.}.] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] run say Oops, seems I have dropped something... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] run summon item ~ ~-1 ~ {Item:{id:"minecraft:honey_bottle",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
 #   Golden carrot (rarity: 6000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,HenriActiveCounter=6000..] positioned @s run tag @s add HenriDrops
+execute as @e[limit=1,sort=random] if entity @s[scores={HenriActiveCounter=6000..}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] run say Oops, seems I have dropped something... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] run summon item ~ ~-1 ~ {Item:{id:"minecraft:golden_carrot",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
 #   Brewing stand (rarity: 5000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,HenriActiveCounter=5000..] positioned @s run tag @s add HenriDrops
+execute as @e[limit=1,sort=random] if entity @s[scores={HenriActiveCounter=5000..}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] run say Oops, seems I have dropped something... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] run summon item ~ ~-1 ~ {Item:{id:"minecraft:brewing_stand",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
 #   Golden carrot (rarity: 6000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,HenriActiveCounter=6000..] positioned @s run tag @s add HenriDrops
+execute as @e[limit=1,sort=random] if entity @s[scores={HenriActiveCounter=6000..}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] run say Oops, seems I have dropped something... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] run summon item ~ ~-1 ~ {Item:{id:"minecraft:golden_carrot",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
 #   Living slime (rarity: 6500)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,HenriActiveCounter=6500..] positioned @s run tag @s add HenriDrops
+execute as @e[limit=1,sort=random] if entity @s[scores={HenriActiveCounter=6500..}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] run say Oops, seems I have dropped a bottle... A slime broke free
 execute as @e[tag=HenriDrops] run summon slime ~ ~ ~
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
 
 #   Golden carrot (rarity: 17000)
-execute as @e[limit=1,sort=random] if entity @s[tag=Henri,HenriActiveCounter=17000..] positioned @s run tag @s add HenriDrops
+execute as @e[limit=1,sort=random] if entity @s[scores={HenriActiveCounter=17000..}] positioned as @s run tag @s add HenriDrops
 execute as @e[tag=HenriDrops] run say Oops, seems I have dropped something... Well you can just pick it up, I don't mind.
 execute as @e[tag=HenriDrops] run summon item ~ ~-1 ~ {Item:{id:"minecraft:golden_carrot",Count:1}}
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
