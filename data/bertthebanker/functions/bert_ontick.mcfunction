@@ -1,0 +1,1 @@
+function bertthebanker:check/openedbankaccounts
