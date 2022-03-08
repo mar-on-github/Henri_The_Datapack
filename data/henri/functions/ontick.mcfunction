@@ -26,3 +26,6 @@ execute if data storage minecraft:henridatapack {MultipleHenris:0} run kill @e[t
 
 # The interactive Henri comes to live
 function henris_potions:henri/active
+
+# Is bert here?
+execute if data storage minecraft:henridatapack {bertthebanker:1} run function bertthebanker:bert_ontick
