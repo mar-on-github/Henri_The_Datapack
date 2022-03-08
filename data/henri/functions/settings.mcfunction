@@ -33,5 +33,12 @@ execute if data storage minecraft:henridatapack {henrysanimals:1} run tellraw @p
 execute if data storage minecraft:henridatapack {henrysanimals:0} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack henrysanimals set value 1"}}]
 tellraw @p {"text":"Default: Enabled","color":"gray"}
 
+
+tellraw @p ["",{"text":"Allow Henri's friend, Bert the Banker, to join the game and cycle around the players to ","italic":true,"color":"aqua"}]
+execute if data storage minecraft:henridatapack {bertthebanker:1} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"enabled","italic":true,"color":"green"},{"text":") ","italic":true},{"text":"DISABLE","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack bertthebanker set value 0"}}]
+execute if data storage minecraft:henridatapack {bertthebanker:0} run tellraw @p ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack bertthebanker set value 1"}}]
+tellraw @p {"text":"Default: Enabled","color":"gray"}
+execute if data storage minecraft:henridatapack {bertthebanker:1} run tellraw @p ["","italic":true},{"text":"Go to Bert Settings","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/function bertthebanker:settings"}}]
+
 # version display
 execute as @s run trigger HenriVersion
