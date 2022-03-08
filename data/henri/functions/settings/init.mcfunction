@@ -7,4 +7,5 @@ execute unless data storage minecraft:henridatapack settingsinit run data modify
 data modify storage henridatapack settingsinit set value 1
 # Now set for config v2
 execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack bertthebanker set value 1
+execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack enableactive set value 1
 data modify storage henridatapack settingsinit set value 2

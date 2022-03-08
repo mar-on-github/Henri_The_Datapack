@@ -25,7 +25,7 @@ execute if data storage minecraft:henridatapack {MultipleHenris:0} run tag @e[ta
 execute if data storage minecraft:henridatapack {MultipleHenris:0} run kill @e[tag=Henri,tag=!TheRealHenri]
 
 # The interactive Henri comes to live
-function henris_potions:henri/active
+execute if data storage minecraft:henridatapack {enableactive:1} run function henris_potions:henri/active
 
 # Is bert here?
 execute if data storage minecraft:henridatapack {bertthebanker:1} run function bertthebanker:bert_ontick
