@@ -14,7 +14,7 @@ scoreboard objectives add HenriVersion trigger
 
 # Load necessary parts
 execute if data storage minecraft:henridatapack {autospawn:1} run function henri:autospawn
-execute if data storage minecraft:henridatapack {bertthebanker:1} run function bertthebanker:bert_onload
+execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_onload
 
 # (Re)Set counters
 scoreboard objectives add HenriActiveCounter dummy

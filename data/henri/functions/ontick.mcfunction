@@ -28,4 +28,4 @@ execute if data storage minecraft:henridatapack {MultipleHenris:0} run kill @e[t
 execute if data storage minecraft:henridatapack {enableactive:1} run function henris_potions:henri/active
 
 # Is bert here?
-execute if data storage minecraft:henridatapack {bertthebanker:1} run function bertthebanker:bert_ontick
+execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_ontick
