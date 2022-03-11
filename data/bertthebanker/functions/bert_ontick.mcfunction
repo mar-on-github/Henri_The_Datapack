@@ -1,1 +1,1 @@
-function bertthebanker:check/openedbankaccounts
+function bertthebanker:check/activity
