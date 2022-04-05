@@ -1,5 +1,5 @@
 # Detect opened bank accounts.
-execute as @a[nbt={Inventory:[{id:paper,Count:1,tag:{display:{Name:"\"Opened Bert account\"",Lore:["\"Go to Bert the Banker with this to open your account.\""]},NBT:{OpenBertaccount:1},CanPlaceOn:["void"]}}]}] run function bertthebanker:banking
+execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:paper",Count:1b,tag:{display:{Name:"\"Opened Bert account\"",Lore:["\"Go to Bert the Banker with this to open your account.\""]},NBT:{OpenBertaccount:1},CanPlaceOn:["void"]}}]}] run function bertthebanker:banking
 
 # Full fast-deposition of all emeralds would run using this.
 tag @a[scores={Bert_Deposit_All=1..},nbt={Inventory:[{id:"minecraft:emerald",Count:64b}]}] add FastDepos
@@ -22,5 +22,6 @@ scoreboard players enable @a Bert_Deposit_All
 scoreboard players enable @a[scores={Berts_Banking_Credit=-50..}] Bert_Withdraw
 
 # Set up new players with a starting capital
-execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard players add @s Berts_Banking_Credit 150
+execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard players set @s Berts_Banking_Credit 150
+execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run tellraw @s ["",{"text":"<"},{"selector":"@e[tag="},{"text":"BertBanker"},{"selector":"]"},{"text":"> Hi there! If you want, get me a golden ingot and I'll give you a banking pass in return. And because my friend Henri insisted on it, I'll give you a starting amount of "},{"text":"\u1368150","bold":true,"color":"green"}]
 execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard players add @s Bert_Welcomed 1
