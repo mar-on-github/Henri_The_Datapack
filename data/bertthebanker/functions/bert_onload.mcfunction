@@ -5,3 +5,4 @@ scoreboard objectives add Bert_Withdraw trigger
 # Create other scoreboards
 
 scoreboard objectives add Berts_Banking_Credit dummy
+scoreboard objectives add Bert_Welcomed dummy
