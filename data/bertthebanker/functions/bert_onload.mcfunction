@@ -6,3 +6,6 @@ scoreboard objectives add Bert_Withdraw trigger
 
 scoreboard objectives add Berts_Banking_Credit dummy
 scoreboard objectives add Bert_Welcomed dummy
+
+# Make Bert travel around the map
+function bertthebanker:berttravels
