@@ -16,4 +16,9 @@ execute if data storage minecraft:henridatapack {bertravels:1} run tellraw @s ["
 execute if data storage minecraft:henridatapack {bertravels:0} run tellraw @s ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack bertravels set value 1"}}]
 tellraw @s {"text":"Default: Enabled","color":"gray"}
 
+tellraw @s ["",{"text":"\nAllow players to summon Bert by triggering [SummonBert].","italic":true,"color":"aqua"}]
+execute if data storage minecraft:henridatapack {summonbert:1} run tellraw @s ["",{"text":"(Is currently ","italic":true},{"text":"enabled","italic":true,"color":"green"},{"text":") ","italic":true},{"text":"DISABLE","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack summonbert set value 0"}}]
+execute if data storage minecraft:henridatapack {summonbert:0} run tellraw @s ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack summonbert set value 1"}}]
+tellraw @s {"text":"Default: Enabled","color":"gray"}
+
 execute as @s run trigger HenriVersion

@@ -1,6 +1,7 @@
 # Create triggerable scoreboards
 scoreboard objectives add Bert_Deposit_All trigger
 scoreboard objectives add Bert_Withdraw trigger
+scoreboard objectives add SummonBert trigger "Get Bert to you, asap"
 
 # Create other scoreboards
 

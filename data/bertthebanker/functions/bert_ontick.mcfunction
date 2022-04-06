@@ -20,6 +20,7 @@ execute as @a[scores={Bert_Withdraw=1..}] run scoreboard players remove @s Bert_
 # Allow users to run the Bert triggers.
 scoreboard players enable @a Bert_Deposit_All
 scoreboard players enable @a[scores={Berts_Banking_Credit=-50..}] Bert_Withdraw
+execute unless data storage minecraft:henridatapack {summonbert:0} run scoreboard players enable @a SummonBert
 
 # Set up new players with a starting capital
 execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard players set @s Berts_Banking_Credit 150
@@ -30,3 +31,9 @@ execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard player
 tag @e[tag=BertBanker,sort=random,limit=1] add TheRealBert
 execute unless data storage minecraft:henridatapack {multipleberts:1} run kill @e[tag=BertBanker,tag=!TheRealBert]
 tag @e remove TheRealBert
+
+# Summon Bert, quick!
+execute unless data storage minecraft:henridatapack {summonbert:0} run execute as @a[scores={SummonBert=1..}] run tag @s add SummonedBert
+execute unless data storage minecraft:henridatapack {summonbert:0} run execute as @a[scores={SummonBert=1..}] run tellraw @s "Bert is on their way!"
+execute unless data storage minecraft:henridatapack {summonbert:0} run execute as @a[scores={SummonBert=1..}] run schedule function bertthebanker:bertsummoned 3s
+execute as @a[scores={SummonBert=1..}] run scoreboard players reset @s SummonBert

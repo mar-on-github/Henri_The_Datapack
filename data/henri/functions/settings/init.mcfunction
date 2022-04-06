@@ -14,3 +14,6 @@ data modify storage henridatapack multipleberts set value 0
 data modify storage henridatapack bertthebanker set value 1
 data modify storage henridatapack bertravels set value 1
 data modify storage henridatapack settingsinit set value 3
+# Now set for config v4
+data modify storage henridatapack summonbert set value 1
+data modify storage henridatapack settingsinit set value 4
