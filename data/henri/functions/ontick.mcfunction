@@ -29,3 +29,4 @@ execute if data storage minecraft:henridatapack {enableactive:1} run function he
 
 # Is bert here?
 execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_ontick
+execute if data storage minecraft:henridatapack {bertthebanker:0} run kill @e[tag=BertBanker]

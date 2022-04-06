@@ -8,4 +8,4 @@ scoreboard objectives add Berts_Banking_Credit dummy
 scoreboard objectives add Bert_Welcomed dummy
 
 # Make Bert travel around the map
-function bertthebanker:berttravels
+execute unless data storage minecraft:henridatapack {bertravels:0} run function bertthebanker:berttravels

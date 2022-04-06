@@ -4,4 +4,4 @@ execute as @a[sort=random,limit=1] run tag @s add BertTravellocation
 execute positioned as @a[tag=BertTravellocation] as @e[tag=BertBanker,limit=1,sort=random] run tp @s ~ ~ ~
 tag @a[tag=BertTravellocation] remove BertTravellocation
 execute as @e[tag=BertBanker,limit=1,sort=random] run tell @a[sort=nearest] "Hi! Thought I'd drop by."
-schedule function bertthebanker:berttravels 300s
+execute unless data storage minecraft:henridatapack {bertravels:0} run schedule function bertthebanker:berttravels 300s
