@@ -25,3 +25,8 @@ scoreboard players enable @a[scores={Berts_Banking_Credit=-50..}] Bert_Withdraw
 execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard players set @s Berts_Banking_Credit 150
 execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run tellraw @s ["",{"text":"<"},{"selector":"@e[tag="},{"text":"BertBanker"},{"selector":"]"},{"text":"> Hi there! If you want, get me a golden ingot and I'll give you a banking pass in return. And because my friend Henri insisted on it, I'll give you a starting amount of "},{"text":"\u1368150","bold":true,"color":"green"}]
 execute as @a unless entity @s[scores={Bert_Welcomed=1..}] run scoreboard players add @s Bert_Welcomed 1
+
+# Will the real Bert-Banker please stand up?
+tag @e[tag=BertBanker,sort=random,limit=1] add TheRealBert
+execute unless data storage minecraft:henridatapack {multipleberts:1} run kill @e[tag=BertBanker,tag=!TheRealBert]
+tag @e remove TheRealBert
