@@ -2,10 +2,10 @@
 scoreboard objectives add CurrentHenriVersion dummy
 scoreboard players set Installed.big CurrentHenriVersion 5
 scoreboard players set Installed.dot CurrentHenriVersion 1
-scoreboard players set Installed.small CurrentHenriVersion 0
+scoreboard players set Installed.small CurrentHenriVersion 2
 
 # On first run init. settings.
-execute unless data storage minecraft:henridatapack {settingsinit:4} run function henri:settings/init
+execute unless data storage minecraft:henridatapack {settingsinit:5} run function henri:settings/init
 
 # Set triggers
 scoreboard objectives add DoTheHenriCheat trigger

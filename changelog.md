@@ -1,10 +1,17 @@
 # Henri's datapack > Changelog
 
-## Future versions
+## Future version
 ### New
 
-
-## v5.1.1 (latest)
+## v5.1.2
+### New
+- Bert now travels interdimensional too.
+- Bert won't travel to nearby players anymore.
+- Henry now defends himself against his biggest enemies.
+- Henry can now explode from anger (disabled by default).
+### Fixed
+- `/trigger HenriVersion` wasn't updated last version.
+## v5.1.1
 ### New
 - Bert can now be summoned by users
 ### Changed

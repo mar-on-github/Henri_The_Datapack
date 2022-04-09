@@ -101,3 +101,31 @@ execute as @e[tag=HenriDrops] positioned as @s run say Oops, seems I have droppe
 execute as @e[tag=HenriDrops] positioned as @s run summon slime ~ ~ ~
 scoreboard players reset @e[tag=HenriDrops] HenriActiveCounter
 tag @e remove HenriDrops
+
+# Henri dislikes witches, it's a fact. It changes everything about him.
+execute as @e[tag=Henri] positioned as @s run scoreboard players add @e[distance=..15,type=witch] HenriActiveCounter 1
+
+execute as @e[tag=Henri] positioned as @s unless entity @e[type=witch,distance=..10] run data merge entity @s {VillagerData:{profession:"nitwit"}}
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run data merge entity @s {VillagerData:{profession:"cleric"}}
+
+execute as @e[tag=Henri] positioned as @s unless entity @e[type=witch,distance=..10] run data merge entity @s {Invulnerable:1b}
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run data merge entity @s {Invulnerable:0b}
+
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run data merge entity @e[scores={HenriActiveCounter=100..},distance=..10,type=!player,limit=1,tag=!Henri] {Fire:400s}
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run effect clear @e[scores={HenriActiveCounter=100..},distance=..10,type=!player,limit=1,tag=!Henri] minecraft:fire_resistance
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run execute positioned as @e[scores={HenriActiveCounter=200..},distance=1..10,type=!player,tag=!Henri,type=!arrow,type=!item] run summon minecraft:arrow ~ ~5 ~
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run effect give @e[scores={HenriActiveCounter=250..},distance=..10,type=!player,limit=1,tag=!Henri] minecraft:levitation
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run scoreboard players reset @e[scores={HenriActiveCounter=300..},distance=..10,type=!player,limit=1,tag=!Henri] HenriActiveCounter
+
+# Measure his anger, he could explode if this gets too high!
+execute as @e[tag=Henri] positioned as @s if entity @e[type=witch,distance=..10] run scoreboard objectives add Henry.Anger dummy
+execute as @e[tag=Henri] run scoreboard players add @s Henry.Anger 1
+execute as @e[tag=Henri] positioned as @s unless entity @e[type=witch,distance=..10] run scoreboard objectives remove Henry.Anger
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=200}] run say this pisses me off
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=300}] run say I hate witches and other scum like that
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=1000}] run say *agressive breathing*
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=3000}] run say I CANNOT STAND THIS
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=2000}] run execute as @e[tag=BertBanker,limit=1] run say Oh no... make him more angry and he's gonna blow
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=8000}] run say I REALLY AM PISSED RIGHT NOW
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=9999..}] run data merge entity @s {Invulnerable:1b}
+execute as @e[tag=Henri] positioned as @s if entity @s[scores={Henry.Anger=10000..}] run summon fireball ~ ~2 ~ {ExplosionPower:20,Motion:[0.1,-5.0,0.1]}

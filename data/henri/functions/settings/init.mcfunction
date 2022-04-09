@@ -17,3 +17,6 @@ data modify storage henridatapack settingsinit set value 3
 # Now set for config v4
 data modify storage henridatapack summonbert set value 1
 data modify storage henridatapack settingsinit set value 4
+# Now set for config v5
+data modify storage henridatapack angerexplosions set value 0
+data modify storage henridatapack settingsinit set value 5
