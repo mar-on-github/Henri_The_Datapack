@@ -2,6 +2,7 @@
 scoreboard objectives add Bert_Deposit_All trigger
 scoreboard objectives add Bert_Withdraw trigger
 scoreboard objectives add SummonBert trigger "Get Bert to you, asap"
+scoreboard objectives add BertBankApp trigger "Open Bert Banking app"
 
 # Create other scoreboards
 

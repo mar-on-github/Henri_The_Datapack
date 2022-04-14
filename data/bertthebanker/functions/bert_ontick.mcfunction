@@ -1,5 +1,10 @@
 # Detect opened bank accounts.
 execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:paper",Count:1b,tag:{display:{Name:"\"Opened Bert account\"",Lore:["\"Go to Bert the Banker with this to open your account.\""]},NBT:{OpenBertaccount:1},CanPlaceOn:["void"]}}]}] run function bertthebanker:banking
+execute as @a if entity @s[nbt={Inventory:[{id:player_head,tag:{display:{Name:"{\"text\":\"Bert's Banking Account\"}",Lore:["\"After buying this, you can start using your BertBanking app!\""]},NBT:{BertsBankingAcc:1},SkullOwner:"MrSnowDK"}}]},tag=!Bert.has.acc] run tag @s add Bert.new.acc
+tellraw @a[tag=Bert.new.acc] ["",{"text":"OH, seems like you are a new BertsBankApp user!","color":"light_purple"},{"text":"\n\n"},{"text":"Here, take this.","color":"green"}]
+give @a[tag=Bert.new.acc] written_book{pages:['["",{"text":"--------------------\\n \\u0020 Bert the Banker \\u0020 \\u0020\\n--------------------\\n"},{"text":"Quick click:","color":"gold"},{"text":"\\n","color":"reset"},{"text":"Go to the BertBanking app","clickEvent":{"action":"run_command","value":"/trigger BertBankApp"}},{"text":"\\n\\n"},{"text":"Hello, I\'m Bert, Bert the Banker.","color":"light_purple"},{"text":"\\n\\nLong time ago, when bank passes were still player heads... I decided to start a bank.","color":"reset"}]','["",{"text":"...Nowadays, trading player heads would be ridiculous, "},{"text":"RIGHT??!!","italic":true,"color":"dark_blue"},{"text":"\\n\\nSoooow... with the help of a ","color":"reset"},{"text":"very strong drink","hoverEvent":{"action":"show_text","contents":"Yes, it was made by Henri."}},{"text":", I got my best "},{"text":"micro-redstone","color":"dark_red"},{"text":" developers to create for me:\\n\\nBert\'s Banking, now without a physical Bert!\\nJust use ","color":"reset"},{"text":"/trigger BertBankApp","color":"dark_aqua","clickEvent":{"action":"copy_to_clipboard","value":"/trigger BertBankApp"}},{"text":"!","color":"reset"}]'],title:"Bert's Banking app manual",author:"Bert the Banker (With help of Henri)",display:{Lore:["Use this book to get started in the BertTheBanker app!"]}}
+tag @a[tag=Bert.new.acc] add Bert.has.acc
+tag @a remove Bert.new.acc
 
 # Full fast-deposition of all emeralds would run using this.
 tag @a[scores={Bert_Deposit_All=1..},nbt={Inventory:[{id:"minecraft:emerald",Count:64b}]}] add FastDepos
@@ -18,6 +23,7 @@ execute as @a[scores={Bert_Withdraw=1..}] run scoreboard players remove @s Bert_
 
 
 # Allow users to run the Bert triggers.
+scoreboard players enable @a[tag=Bert.has.acc] BertBankApp
 scoreboard players enable @a Bert_Deposit_All
 scoreboard players enable @a[scores={Berts_Banking_Credit=-50..}] Bert_Withdraw
 execute unless data storage minecraft:henridatapack {summonbert:0} run scoreboard players enable @a SummonBert
