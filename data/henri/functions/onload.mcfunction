@@ -13,7 +13,8 @@ scoreboard objectives add SummonTheScaryGuy trigger
 scoreboard objectives add HenriVersion trigger
 
 # Load necessary parts
-execute if data storage minecraft:henridatapack {autospawn:1} run function henri:autospawn
+execute unless data storage minecraft:henridatapack {autospawn:0} run function henri:autospawn
+execute unless data storage minecraft:henridatapack {autospawn:0} run function henris_potions:henri/travel
 execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_onload
 
 # (Re)Set counters
