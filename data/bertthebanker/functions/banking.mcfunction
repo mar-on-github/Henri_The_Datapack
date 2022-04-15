@@ -7,3 +7,4 @@ tellraw @s "- End of options"
 tellraw @s ["",{"text":"NOTE: You'll have the banking app available forever now!","color":"light_purple"},{"text":"\n\n"},{"text":"use `","color":"yellow"},{"text":"/trigger BertBankApp","bold":true,"color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger BertBankApp"}},{"text":"` to reopen this app.","color":"yellow"}]
 # After opening the menu, deactivate the old banking pass.
 clear @s minecraft:paper{NBT:{OpenBertaccount:1}}
+scoreboard players reset @s BertBankApp
