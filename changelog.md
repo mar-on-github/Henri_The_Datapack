@@ -1,6 +1,6 @@
 # Henri's datapack > Changelog
 
-## Future version
+## v5.1.3
 ### New
 - Bert no longer makes you sell other people's heads: The BertBank-App was released!
 ### Changed
