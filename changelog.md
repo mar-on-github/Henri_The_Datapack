@@ -3,6 +3,9 @@
 ## Future version
 ### New
 - Bert no longer makes you sell other people's heads: The BertBank-App was released!
+### Changed
+- Henri now travels around the map, like Bert.
+
 ## v5.1.2
 ### New
 - Bert now travels interdimensional too.
