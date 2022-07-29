@@ -1,0 +1,4 @@
+give @a minecraft:lingering_potion{Potion:"minecraft:water",display:{Name:'[{"text":"Henri-made nurturing stimulant","italic":"true"}]'},CustomPotionEffects:[{Id:1,Amplifier:40,Duration:240},{Id:3,Amplifier:126,Duration:240},{Id:5,Amplifier:126,Duration:240},{Id:6,Amplifier:8},{Id:8,Amplifier:10,Duration:240},{Id:10,Amplifier:31,Duration:240},{Id:11,Amplifier:4,Duration:240},{Id:12,Duration:240},{Id:13,Duration:240},{Id:16,Duration:240},{Id:21,Amplifier:126,Duration:240},{Id:22,Amplifier:126,Duration:240},{Id:23,Amplifier:126},{Id:26,Amplifier:126,Duration:240},{Id:30,Duration:240},{Id:29,Duration:240},{Id:30,Duration:240}],}
+give @a milk_bucket
+give @a melon_slice 35
+tellraw @a "Henri the medicin man: Okay, this is a stimulant actually... I want to make it up to you, this can also kill zombies!"
