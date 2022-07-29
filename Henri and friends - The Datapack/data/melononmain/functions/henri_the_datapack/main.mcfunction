@@ -1,3 +1,9 @@
+##
+ # main.mcfunction
+ # henri_the_datapack
+ #
+ # Created by MelonOnMain.
+##
 # Tell them the Henri version
 scoreboard players enable @a HenriVersion
 # (generated with:

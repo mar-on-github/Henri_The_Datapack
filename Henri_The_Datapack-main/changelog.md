@@ -1,9 +1,5 @@
 # Henri's datapack > Changelog
-## v6.0.0
-### Changed
-- > Complete restructure of datapack files.
-### New
-- > `[Expirimental]` Compatibility with Vault [Economy](https://www.spigotmc.org/resources/economy.87053/) Spigot plugin.
+
 ## v5.1.3
 Bugfixes and new functions
 ### New
