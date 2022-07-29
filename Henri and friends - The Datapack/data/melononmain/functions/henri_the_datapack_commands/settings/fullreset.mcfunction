@@ -6,4 +6,4 @@
 ##
 data modify storage henridatapack settingsinit set value 0
 function MelonOnMain:henri_the_datapack/reset
-execute as @s run function melononmain:henri_the_datapack/settings
+execute as @s run function melononmain:henri_the_datapack_commands/settings
