@@ -16,7 +16,7 @@ scoreboard players reset @a[scores={HenriVersion=1..}] HenriVersion
 execute as @a[scores={DoTheHenriCheat=1..}] run function henrihascheats:thehenricheat
 scoreboard players reset @a[scores={DoTheHenriCheat=1..}] DoTheHenriCheat
 
-execute as @a[scores={SummonTheScaryGuy=1..}] run function henris_potions:spawn_the_scary_guy
+execute as @a[scores={SummonTheScaryGuy=1..}] run function melononmain:henri_the_datapack_commands/spawn_the_scary_guy
 scoreboard players reset @a[scores={SummonTheScaryGuy=1..}] SummonTheScaryGuy
 
 # Settings enforcer
@@ -31,7 +31,7 @@ execute if data storage minecraft:henridatapack {MultipleHenris:0} run tag @e[ta
 execute if data storage minecraft:henridatapack {MultipleHenris:0} run kill @e[tag=Henri,tag=!TheRealHenri]
 
 # The interactive Henri comes to live
-execute unless data storage minecraft:henridatapack {enableactive:0} run function henris_potions:henri/active
+execute unless data storage minecraft:henridatapack {enableactive:0} run function melononmain:henri_the_datapack_background/active
 
 # Is bert here?
 execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_ontick

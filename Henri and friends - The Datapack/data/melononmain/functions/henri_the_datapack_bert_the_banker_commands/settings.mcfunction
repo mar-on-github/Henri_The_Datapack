@@ -1,4 +1,9 @@
-tellraw @s "Hi! These settings aren't available yet. If necessary, they'll be available in next versions."
+##
+ # settings.mcfunction
+ # 
+ #
+ # Created by MelonOnMain.
+##
 
 tellraw @a ["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"]
 tellraw @s ["",{"text":"Henri The Datapack > Bert","color":"#556969"},{"text":" by "},{"text":"that_mar","color":"light_purple","clickEvent":{"action":"open_url","value":"https://storiesbymar.nl/"},"hoverEvent":{"action":"show_text","contents":"that is my ign! Click on it to head over to my site."}},{"text":" - "},{"text":"Settings","bold":true,"italic":1},{"text":"\n\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261\u2261"}]

@@ -55,7 +55,7 @@ tellraw @s ["",{"text":"\nAllow Henri's friend, Bert the Banker, to join the gam
 execute if data storage minecraft:henridatapack {bertthebanker:1} run tellraw @s ["",{"text":"(Is currently ","italic":true},{"text":"enabled","italic":true,"color":"green"},{"text":") ","italic":true},{"text":"DISABLE","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack bertthebanker set value 0"}}]
 execute if data storage minecraft:henridatapack {bertthebanker:0} run tellraw @s ["",{"text":"(Is currently ","italic":true},{"text":"disabled","italic":true,"color":"dark_red"},{"text":") ","italic":true},{"text":"ENABLE","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/data modify storage henridatapack bertthebanker set value 1"}}]
 tellraw @s {"text":"Default: Enabled","color":"gray"}
-execute if data storage minecraft:henridatapack {bertthebanker:1} run tellraw @s ["",{"text":"Go to Bert Settings","bold":true,"underlined":true,"color":"blue","clickEvent":{"action":"run_command","value":"/function bertthebanker:settings"}}]
+execute if data storage minecraft:henridatapack {bertthebanker:1} run tellraw @s ["",{"text":"Go to Bert Settings","bold":true,"underlined":true,"color":"blue","clickEvent":{"action":"run_command","value":"/function melononmain:henri_the_datapack_bert_the_banker_commands/settings"}}]
 
 # version display
 execute as @s run trigger HenriVersion
