@@ -34,5 +34,5 @@ execute if data storage minecraft:henridatapack {MultipleHenris:0} run kill @e[t
 execute unless data storage minecraft:henridatapack {enableactive:0} run function melononmain:henri_the_datapack_background/active
 
 # Is bert here?
-execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_ontick
+execute unless data storage minecraft:henridatapack {bertthebanker:0} run function melononmain:henri_the_datapack_bert_the_banker_background/main
 execute if data storage minecraft:henridatapack {bertthebanker:0} run kill @e[tag=BertBanker]

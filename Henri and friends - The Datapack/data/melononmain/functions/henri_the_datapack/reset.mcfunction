@@ -11,7 +11,29 @@ scoreboard players set Installed.dot CurrentHenriVersion 0
 scoreboard players set Installed.small CurrentHenriVersion 0
 
 # On first run init. settings.
-execute unless data storage minecraft:henridatapack {settingsinit:5} run function melononmain:henri_the_datapack/settings/init
+    # First set them to config v1's standards
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack enablespawning set value 0
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack autospawn set value 1
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack MultipleHenris set value 0
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack henricheatenabled set value 0
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack henrysanimals set value 1
+        data modify storage henridatapack settingsinit set value 1
+    # Now set for config v2
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack bertthebanker set value 1
+        execute unless data storage minecraft:henridatapack settingsinit run data modify storage henridatapack enableactive set value 1
+        data modify storage henridatapack settingsinit set value 2
+    # Now set for config v3
+        data modify storage henridatapack multipleberts set value 0
+        data modify storage henridatapack bertthebanker set value 1
+        data modify storage henridatapack bertravels set value 1
+        data modify storage henridatapack settingsinit set value 3
+    # Now set for config v4
+        data modify storage henridatapack summonbert set value 1
+        data modify storage henridatapack settingsinit set value 4
+    # Now set for config v5
+        data modify storage henridatapack angerexplosions set value 0
+        data modify storage henridatapack settingsinit set value 5
+
 
 # Set triggers
 scoreboard objectives add DoTheHenriCheat trigger
@@ -33,7 +55,7 @@ execute as @e[type=villager,tag=Henri] positioned as @s run tellraw @a[distance=
 
 
 execute unless data storage minecraft:henridatapack {autospawn:0} run function melononmain:henri_the_datapack_background/travel
-execute unless data storage minecraft:henridatapack {bertthebanker:0} run function bertthebanker:bert_onload
+execute unless data storage minecraft:henridatapack {bertthebanker:0} run function melononmain:henri_the_datapack_bert_the_banker_background/reset
 
 # (Re)Set counters
 scoreboard objectives add HenriActiveCounter dummy
